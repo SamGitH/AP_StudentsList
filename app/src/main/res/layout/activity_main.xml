@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/activity_main_tv_sl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/students_list"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/activity_main_rv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_tv_sl" />
+
+    <Button
+        android:id="@+id/activity_main_but_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_rv" />
+
+    <View
+        android:id="@+id/activity_main_line"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_but_add"
+        android:background="@color/black"/>
+
+    <TextView
+        android:id="@+id/activity_main_tv_s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/student"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_line"
+        app:layout_constraintEnd_toEndOf="parent" />
+    
+    <ImageView
+        android:id="@+id/activity_main_img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_tv_s"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/activity_main_et_fn"
+        tools:src="@drawable/man1"/>
+
+    <EditText
+        android:id="@+id/activity_main_et_fn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_tv_s"
+        app:layout_constraintStart_toEndOf="@id/activity_main_img"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/activity_main_et_sn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_et_fn"
+        app:layout_constraintStart_toEndOf="@id/activity_main_img"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <CheckBox
+        android:id="@+id/activity_main_chb_m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check_box_man"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_et_sn"
+        app:layout_constraintStart_toEndOf="@id/activity_main_img" />
+
+    <CheckBox
+        android:id="@+id/activity_main_chb_w"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check_box_woman"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_chb_m"
+        app:layout_constraintStart_toEndOf="@id/activity_main_img" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="activity_main_img,activity_main_chb_w" />
+
+    <Button
+        android:id="@+id/activity_main_but_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_del"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/activity_main_but_save"
+        app:layout_constraintTop_toBottomOf="@id/barrier" />
+
+    <Button
+        android:id="@+id/activity_main_but_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_save"
+        app:layout_constraintStart_toEndOf="@id/activity_main_but_del"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier" />
+
+
+
+</android.support.constraint.ConstraintLayout>

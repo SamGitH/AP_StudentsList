@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Students</string>
+    <string name="students_list">Students list</string>
+    <string name="button_add">+ Add student</string>
+    <string name="student">Student</string>
+    <string name="check_box_man">Man</string>
+    <string name="check_box_woman">Woman</string>
+    <string name="button_del">Delete</string>
+    <string name="button_save">Save</string>
+
+
+</resources>
